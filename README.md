@@ -17,27 +17,20 @@ Withdraw money
 
 Exit from the application
 
-
 🛠️ Tech Stack
 
 Language: Java
 
 IDE Used: IntelliJ IDEA (or any Java IDE)
 
-
 ▶️ How to Run
 
 1. Clone the repository:
-
-ATM-interface-java-program-
-
+https://github.com/Sneha529/ATM-interface-java-program-.git
 
 2. Open in IntelliJ IDEA (or any Java IDE).
 
-
 3. Run the ATMInterface.java file.
-
-
 
 📷 Output Example
 
