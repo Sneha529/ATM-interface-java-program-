@@ -29,7 +29,7 @@ IDE Used: IntelliJ IDEA (or any Java IDE)
 
 1. Clone the repository:
 
-git clone https://github.com/Sneha529/ATM-Interface.git
+ATM-interface-java-program-
 
 
 2. Open in IntelliJ IDEA (or any Java IDE).
