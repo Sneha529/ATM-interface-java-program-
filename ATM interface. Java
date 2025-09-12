@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+class BankATM {
+    private double amount;   // balance rakhega
+
+    // starting balance set karne ke liye constructor
+    BankATM(double start) {
+        amount = start;
+    }
+
+    // balance show karna
+    void showBalance() {
+        System.out.println("Current Balance: ₹" + amount);
+    }
+
+    // paisa jama karna
+    void addMoney(double money) {
+        if (money > 0) {
+            amount += money;
+            System.out.println("₹" + money + " added to your account.");
+        } else {
+            System.out.println("Deposit amount should be greater than 0.");
+        }
+    }
+
+    // paisa nikalna
+    void takeMoney(double money) {
+        if (money > 0 && money <= amount) {
+            amount -= money;
+            System.out.println("₹" + money + " withdrawn from your account.");
+        } else {
+            System.out.println("Not enough balance or invalid amount!");
+        }
+    }
+}
+
+public class ATMApp {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        BankATM user = new BankATM(2000);  // starting balance 2000
+
+        int option;
+        do {
+            System.out.println("\n--- Welcome to Sneha's ATM---");
+            System.out.println("1. Balance Check");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Exit");
+            System.out.print("Choose option: ");
+            option = input.nextInt();
+
+            switch (option) {
+                case 1:
+                    user.showBalance();
+                    break;
+                case 2:
+                    System.out.print("Enter amount to deposit: ");
+                    double d = input.nextDouble();
+                    user.addMoney(d);
+                    break;
+                case 3:
+                    System.out.print("Enter amount to withdraw: ");
+                    double w = input.nextDouble();
+                    user.takeMoney(w);
+                    break;
+                case 4:
+                    System.out.println("Session ended. Thank you!");
+                    break;
+                default:
+                    System.out.println("Wrong choice! Please select again.");
+            }
+        } while (option != 4);
+
+        input.close();
+    }
+}
